@@ -4,52 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>coverto de dinheiro</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="section-max">
-        <div id="gif"><img src="./assets/0b855c3cee7fbceab7a89831e6096fe140b43ca9.gif" alt="gif"></div>
-        <div class="conteiner-max">
-            <div class="opitions">
-                <p>concerter <b>de </b> </p>
-                <input placeholder="R$ Real brasileiro">
-            </div>
-            <div class="opitions">
-                <p>converter <b> para</b></p>
-                <select  id="convertor">
-                    <option value="USD">$ Dólar americano</option>
-                    <option value="EUR">€ Euro</option>
-                    <option value="GBP">£ libra esterlina</option>
-                    <option value="BTC">₿ Biticoin</option>
-                </select>
-            </div>
-            <div class="opitions valor">
-                <p>valor</p>
-                <input placeholder="R$ 10.000.00">
-            </div>
-            <button class="buton" >converter</button>
-            <div>
-                <div class="conteiner-left-max">
-                    <img src="./assets/brasil 2.png" id="img" alt="icone-pais">
-                    <p>Real  </p>
-                    <p id="value-money">R$ 1</p>
-                    <img src="./assets/Vector.svg" alt="seta">
-                    <img id="icone" src="./assets/estados-unidos (1) 1.png"  alt="icone-pais">
-                    <p id="name2-money">dolar</p>
-                    <p id="value2-money">US$ 5.45</p>
+
+    <header>
+        <h1>Conversor de Moedas</h1>
+    </header>
+
+    <main class="section-max">
+
+        <!-- GIF ilustrativo -->
+        <figure id="gif">
+            <img src="./assets/0b855c3cee7fbceab7a89831e6096fe140b43ca9.gif" alt="GIF animado ilustrativo">
+        </figure>
+
+        <section class="conteiner-max">
+
+            <!-- Formulário de conversão -->
+            <form class="form-conversor">
+
+                <div class="opitions">
+                    <label for="input-real">Converter de:</label>
+                    <input id="input-real" type="text" placeholder="R$ Real brasileiro" disabled>
                 </div>
 
-            </div>
-        </div>
-    </section>
+                <div class="opitions">
+                    <label for="convertor">Converter para:</label>
+                    <select id="convertor">
+                        <option value="USD">$ Dólar Americano</option>
+                        <option value="EUR">€ Euro</option>
+                        <option value="GBP">£ Libra Esterlina</option>
+                        <option value="BTC">₿ Bitcoin</option>
+                    </select>
+                </div>
+
+                <div class="opitions valor">
+                    <label for="valor">Valor:</label>
+                    <input id="valor" type="text" placeholder="R$ 10.000,00">
+                </div>
+
+                <button type="button" class="buton">Converter</button>
+
+            </form>
+
+            <!-- Resultado da conversão -->
+            <aside class="resultado-conversao conteiner-left-max">
+                <figure>
+                    <img src="./assets/brasil 2.png" id="img" alt="Bandeira do Brasil">
+                    <figcaption>Real</figcaption>
+                </figure>
+                <p id="value-money">R$ 1</p>
+
+                <img src="./assets/Vector.svg" alt="Seta de conversão">
+
+                <figure>
+                    <img id="icone" src="./assets/estados-unidos (1) 1.png" alt="Ícone da moeda selecionada">
+                    <figcaption id="name2-money">Dólar</figcaption>
+                </figure>
+                <p id="value2-money">US$ 5.45</p>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Enoc Wellington</p>
+    </footer>
 </body>
-<script src="script.js"></script>
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    
 
 </html>
